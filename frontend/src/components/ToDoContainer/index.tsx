@@ -46,7 +46,7 @@ const TodoContainer: React.FC<TodoContainerProps> = ({
 
   const [, dropRef] = useDrop({
     accept: 'TODO',
-    hover(item: IToDo) {
+    hover(item: IToDo, monitor) {
       const dragToComplet = pendingToDoList.findIndex(
         todo => todo.id === item.id,
       );
